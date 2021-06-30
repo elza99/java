@@ -12,19 +12,16 @@ public class Main {
         String operation = sc.next();
 
         if (operation.equals("+")) {
-            System.out.println(number1 + " " + "+" + " " + number2 + " = " +(number1+number2));
-        }
-
-        if (operation.equals("-")) {
+            System.out.println(number1 + " " + "+" + " " + number2 + " = " + (number1 + number2));
+        } else if (operation.equals("-")) {
             System.out.println(number1 + " " + "-" + " " + number2 + " = " +(number1-number2));
-        }
-
-        if (operation.equals("*")) {
+        } else if (operation.equals("*")) {
             System.out.println(number1 + " " + "*" + " " + number2 + " = " +(number1*number2));
-        }
-
-        if (operation.equals("/")) {
+        } else if (operation.equals("/")) {
             System.out.println(number1 + " " + "/" + " " + number2 + " = " +(number1/number2));
+        }
+        else {
+            System.out.println("Good bye, it won't work");
         }
 
 
