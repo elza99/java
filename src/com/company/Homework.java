@@ -1,27 +1,45 @@
 package com.company;
-import java.util.Arrays;
+
 import java.util.Scanner;
+
 public class Homework {
 
     public static void main(String[] args) {
-        System.out.println("Tell me the array's length");
-        Scanner input = new Scanner(System.in);
-        int size = input.nextInt();
-        int array[] =new int[size];
-        System.out.println("Insert array elements");
-        for(int a = 0;a<size;a++) {
-            array[a] = input.nextInt();
-        }
-        System.out.println("Inserted array elements");
-        for(int a=0;a<size;a++) {
-            System.out.println(" " + array [a]);
-        }
-        System.out.println();
-        int max = Arrays.stream(array).max().orElse(0);
-        System.out.println(max);
-        }
+        Scanner sc = new Scanner(System.in);
+        while(true) {
+            int firstNumber = sc.nextInt();
+            char action = sc.next().charAt(0);
+            int secondNumber = sc.nextInt();
+            if (action == '+') {
+                writeSumToConsole(firstNumber,secondNumber);
 
+            } else if (action == '-') {
+
+                System.out.println(countDifference(firstNumber,secondNumber));
+            } else if (action == '/') {
+
+                System.out.println(firstNumber / secondNumber);
+            } else if (action == '*') {
+
+                System.out.println(firstNumber * secondNumber);
+            } else {
+                System.out.println("Error");
+            }
+        }
     }
+    static void writeSumToConsole(int a, int b) {
+        System.out.println(a + b);
+    }
+    static int countDifference(int a, int b) {
+        return a - b;
+    }
+}
+
+
+
+
+
+
 
 
 
