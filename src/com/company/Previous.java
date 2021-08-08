@@ -16,23 +16,19 @@ public class Previous {
         System.out.println("enter anything");
         String anything = sc.nextLine();
         String[] c = anything.split(" ");
-        for (int i = 0; i < c.length; i++) {
-            switch (anything.charAt(i)) {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-                case 'y':
-                case 'A':
-                case 'E':
-                case 'I':
-                case 'O':
-                case 'U':
-                case 'Y':
-                    System.out.print(" " + anything.charAt(i));
+        int max = (int) Double.MIN_VALUE; // присваиваем переменной max мин значение,
+        for (int i = 0; i < c.length; i++) { // проходимся по списку
+            max = Math.max(max, Integer.parseInt(c[i])); // c помощью метода Math.max сравниваем значение
+            // max и текущий элемент???Спросить
+
+
+
+
+        }
+        System.out.println("The biggest number is " + " " + max);
+
             }
 
         }
-    }
-}
+
+
