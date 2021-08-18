@@ -1,8 +1,7 @@
 package com.company;
 
-import com.sun.source.tree.BinaryTree;
 
-public class kvadrat {
+public class  kvadrat {
 
     public static void main(String[] args) {
 
@@ -15,23 +14,31 @@ public class kvadrat {
         //Подсказки: есть тип boolean,
 
         int[] points = {10, 5, 7, 8, 3, 5, 7, 5, 9, 9, 6, 10, 3, 5, 5, 7, 7, 6, 5, 8, 8, 7, 5, 9, 9, 6, 1, 4, 9, 5, 7, 5, 8, 1, 7, 9, 6, 9, 9, 9, 6, 6, 5, 5, 1, 9, 9, 2, 2, 3, 3, 4, 1, 1, 4, 3, 4};
+        int quantity=0;
+        int sum=0;
+        int averageNumber=0;
         for (int point : points) {
             if (isEvenNumber(point)) {
-                System.out.println(Math.pow(point,2)); //можно ли написать вручную формулу?
-            }
+                int resultSquare = findSquare(point);
+                quantity++;
+                sum+=resultSquare;
+                averageNumber=sum/quantity;
             }
         }
-
+        System.out.println(averageNumber);
+    }
 
     public static boolean isEvenNumber(int a) {
-        if (a % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return a % 2 == 0;
     }
 
+    public static int findSquare(int a) {
+        return a * a;
     }
+}
+
+
+
 
 
 
